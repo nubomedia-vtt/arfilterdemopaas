@@ -1,4 +1,4 @@
-FROM nubomedia/apps-baseimage:v1
+FROM nubomedia/apps-baseimage:bin
 
 MAINTAINER Nubomedia
 
