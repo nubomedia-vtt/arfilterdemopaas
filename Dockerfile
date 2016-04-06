@@ -1,3 +1,4 @@
+FROM ubuntu:14.04
 FROM nubomedia/apps-baseimage:bin
 
 MAINTAINER Nubomedia
