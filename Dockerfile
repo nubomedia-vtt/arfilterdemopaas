@@ -11,7 +11,7 @@ RUN mkdir /tmp/arfilterdemo
 RUN adduser -D tteyli
 RUN mkdir -p /home/tteyli/.ssh 
 ADD authorized_keys /home/tteyli/.ssh/
-ADD .kurento ~/.kurento
+ADD .kurento /home/tteyli/.kurento
 #RUN less /etc/apt/sources.list
 #RUN 'echo "deb [arch=amd64] http://ssi.vtt.fi/ubuntu trusty main" >> /etc/apt/sources.list'
 #RUN apt-get update
