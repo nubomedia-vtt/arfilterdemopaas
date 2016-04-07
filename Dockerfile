@@ -7,7 +7,7 @@ RUN mkdir /tmp/arfilterdemo
 #ADD arfilterdemo-1.0.1.jar /tmp/arfilterdemo/
 #ADD keystore.jks /
 #ADD ar3d /tmp/ar3d
-RUN cd /tmp/ar3d && mvn compile 
+#RUN cd /tmp/ar3d && mvn compile 
 RUN adduser -D tteyli
 RUN mkdir -p /home/tteyli/.ssh 
 ADD authorized_keys /home/tteyli/.ssh/
