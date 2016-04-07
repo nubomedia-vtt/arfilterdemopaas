@@ -20,5 +20,6 @@ ADD .kurento ~/.kurento
 #RUN /etc/init.d/kurento-media-server-6.0 restart
 EXPOSE 8080 8443 443
 
+
 ENTRYPOINT java -jar /tmp/arfilterdemo/arfilterdemo-1.0.1.jar
 #ENTRYPOINT cd /tmp/ar3d && mvn exec:java
