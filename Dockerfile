@@ -6,7 +6,7 @@ MAINTAINER Nubomedia
 RUN mkdir /tmp/arfilterdemo
 #ADD arfilterdemo-1.0.1.jar /tmp/arfilterdemo/
 #ADD keystore.jks /
-ADD ar3d /tmp/ar3d
+#ADD ar3d /tmp/ar3d
 RUN cd /tmp/ar3d && mvn compile 
 RUN adduser -D tteyli
 RUN mkdir -p /home/tteyli/.ssh 
@@ -20,5 +20,5 @@ ADD .kurento ~/.kurento
 #RUN /etc/init.d/kurento-media-server-6.0 restart
 EXPOSE 8080 8443 443
 
-#ENTRYPOINT java -jar /tmp/arfilterdemo/arfilterdemo-1.0.1.jar
-ENTRYPOINT cd /tmp/ar3d && mvn exec:java
+ENTRYPOINT java -jar /tmp/arfilterdemo/arfilterdemo-1.0.1.jar
+#ENTRYPOINT cd /tmp/ar3d && mvn exec:java
