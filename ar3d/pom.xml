@@ -82,7 +82,7 @@ https://github.com/nubomedia-vtt/armoduledemos.git
 </dependency>
 
     <dependency>
-      <groupId>fi.vtt.nubomedia.kurento</groupId>
+      <groupId>fi.vtt.nubomedia</groupId>
       <artifactId>arfilter</artifactId>
       <version>1.0.0</version>
     </dependency>
