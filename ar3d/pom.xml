@@ -42,35 +42,47 @@ https://github.com/nubomedia-vtt/armoduledemos.git
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>    
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-<!--
-    <spring-boot.version>1.2.8.RELEASE</spring-boot.version>
--->
+    <spring-boot.version>1.2.1.RELEASE</spring-boot.version>
   </properties>
+     
+<parent>
+	  <groupId>org.kurento</groupId>
+	  <artifactId>kurento-parent-pom</artifactId>
+	  <version>6.4.0</version>
+	</parent>
 
-<!--     
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>1.2.8.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-websocket</artifactId>
-      <version>4.1.4.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.kurento</groupId>
       <artifactId>kurento-client</artifactId>
-      <version>6.2.1</version>
     </dependency>
     <dependency>
       <groupId>org.kurento</groupId>
       <artifactId>kurento-utils-js</artifactId>
-      <version>6.2.0</version>
     </dependency>
+
+<dependency>
+        <groupId>de.fhg.fokus.nubomedia</groupId>
+      <artifactId>nubomedia-repository-client</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+<dependency>
+    <groupId>de.fhg.fokus.nubomedia</groupId>
+    <artifactId>nubomedia-media-client</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
     <dependency>
-      <groupId>fi.vtt.nubomedia</groupId>
+      <groupId>fi.vtt.nubomedia.kurento</groupId>
       <artifactId>arfilter</artifactId>
       <version>1.0.0</version>
     </dependency>
@@ -81,80 +93,7 @@ https://github.com/nubomedia-vtt/armoduledemos.git
       <version>3.5</version>
     </dependency>
   </dependencies>
--->
 
-<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.1</version>
-				<configuration>
-					<generateBackupPoms>false</generateBackupPoms>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>package-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>package-javadoc</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.3</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-
-<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.7.RELEASE</version>
-	</parent>
-<!--
   <build>
     <plugins>
       <plugin>
@@ -173,68 +112,16 @@ https://github.com/nubomedia-vtt/armoduledemos.git
 	  </execution>
 	</executions>
       </plugin>
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <configuration>
+    <mainClass>${start-class}</mainClass>
+  </configuration>
+</plugin>
+
     </plugins>
+
   </build>
--->
-
-<dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-websocket</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.kurento</groupId>
-			<artifactId>kurento-client</artifactId>
-			<version>6.4.0</version>
-		</dependency>
-
-<dependency>
-    <groupId>org.kurento</groupId>
-    <artifactId>kurento-commons</artifactId>
-    <version>6.4.0</version>
-</dependency>
-
-    <dependency>
-        <groupId>org.kurento</groupId>
-        <artifactId>kurento-repository-client</artifactId>
-        <version>6.2.1</version>
-</dependency>
-
-<dependency>
-        <groupId>de.fhg.fokus.nubomedia</groupId>
-      <artifactId>nubomedia-repository-client</artifactId>
-      <version>1.0</version>
-    </dependency>
-
-<dependency>
-    <groupId>de.fhg.fokus.nubomedia</groupId>
-    <artifactId>nubomedia-media-client</artifactId>
-    <version>1.0.1</version>
-</dependency>
-
-    <dependency>
-      <groupId>fi.vtt.nubomedia</groupId>
-      <artifactId>arfilter</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-
-
-
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-math3</artifactId>
-      <version>3.5</version>
-    </dependency>
-
-	</dependencies>
 
 </project>

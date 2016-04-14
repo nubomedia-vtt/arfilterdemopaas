@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <version>6.1.0</version>	
+  <groupId>fi.vtt.nubomedia.kurento</groupId>
+  <artifactId>armarkerdetector</artifactId>
+  <packaging>jar</packaging>
+  <name>Kurento AR 3D</name>
+  <description></description>
+
+  <properties>
+<!--
+    <demo.port>8082</demo.port>
+-->    
+
+
+    <start-class>fi.vtt.nubomedia.kurento.Ar3DApp</start-class>
+    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+
+<!--
+    <spring-boot.version>1.2.5.RELEASE</spring-boot.version>
+    <spring-boot.version>1.1.6.RELEASE</spring-boot.version>
+-->
+    <spring-boot.version>1.2.1.RELEASE</spring-boot.version>
+
+  </properties>
+     
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+<!--
+      <version>1.1.6.RELEASE</version>
+      <version>1.2.5.RELEASE</version>
+-->
+<!--
+      <version>1.2.1.RELEASE</version>
+-->
+      <version>1.2.8.RELEASE</version>
+
+    </dependency>
+<!--
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.0.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+-->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-websocket</artifactId>
+<!--
+      <version>4.2.1.RELEASE</version>
+-->
+      <version>4.1.4.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.kurento</groupId>
+      <artifactId>kurento-client</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.kurento</groupId>
+      <artifactId>kurento-utils-js</artifactId>
+<!--
+      <version>6.1.0</version>
+-->
+      <version>6.2.0</version>
+    </dependency>
+
+<!--    
+    <dependency>
+      <groupId>org.kurento.module</groupId>
+      <artifactId>armarkerdetector</artifactId>
+      <version>0.0.6-SNAPSHOT</version>
+    </dependency>
+-->
+    <dependency>
+      <groupId>fi.vtt.nubomedia.kurento</groupId>
+      <artifactId>arfilter</artifactId>
+      <version>1.0.0</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.5</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+	<version>${spring-boot.version}</version>
+	<configuration>
+	  <mainClass>${start-class}</mainClass>
+	  <layout>ZIP</layout>
+	</configuration>
+	<executions>
+	  <execution>
+	    <goals>
+	      <goal>repackage</goal>
+	    </goals>
+	  </execution>
+	</executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

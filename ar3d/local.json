@@ -1,0 +1,13 @@
+{"augmentables":[
+
+{"id":0, "type":"3D", "strings":[{"model":"/opt/faerie.md2"}, {"texture":"/opt/faerie2.bmp"}], "ints":[], "floats":[{"scale":1.0}]},
+
+{"id":1, "type":"3D", "strings":[{"model":"/opt/teapot.ply"}], "ints":[], "floats":[{"scale":0.4}]},
+
+{"id":2, "type":"2D", "strings":[{"model":"/opt/propex.png", "label":"snafu"}], "ints":[], "floats":[{"scale":1.0}]},
+
+{"id":753, "type":"3D", "strings":[{"detect_usefixedpose":"50,50,50,1,0,0,0","model":"/opt/faerie.md2", "label":"snafu"}], "ints":[], "floats":[{"scale":0.5}, {"x":"10"}, {"y":"10"}, {"z":"10"}]}
+
+
+
+]}
