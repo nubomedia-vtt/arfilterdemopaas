@@ -8,7 +8,7 @@ ADD . /home/nubomedia
 RUN sudo chown -R nubomedia /home/nubomedia
 RUN cd /home/nubomedia/ar3d && mvn compile
 
-RUN EXPORT DISPLAY=:0
+RUN SET DISPLAY=:0
 RUN xinit
 
 EXPOSE 8080 8443 443
