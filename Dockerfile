@@ -8,9 +8,6 @@ ADD . /home/nubomedia
 RUN sudo chown -R nubomedia /home/nubomedia
 RUN cd /home/nubomedia/ar3d && mvn compile
 
-RUN xinit
-
-ENV DISPLAY :0
 EXPOSE 8080 8443 443
 
 ENTRYPOINT cd /home/nubomedia/ar3d && mvn exec:java
