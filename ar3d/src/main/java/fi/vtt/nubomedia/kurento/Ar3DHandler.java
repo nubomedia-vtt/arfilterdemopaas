@@ -371,7 +371,7 @@ public class Ar3DHandler extends TextWebSocketHandler {
 				arFilter.setArThing(createArThings(getFile(jsonFile)));	
 			}
 															
-			arFilter.enableTickEvents(true);
+			arFilter.enableTickEvents(false);
 			arFilter.enableAugmentation(true);
 			arFilter.setMarkerPoseFrequency(false, 1);
 			arFilter.setMarkerPoseFrameFrequency(false, 10);
