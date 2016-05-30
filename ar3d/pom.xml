@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.vtt.nubomedia.kurento</groupId>
   <artifactId>arfilterdemo</artifactId>
-  <version>1.0.1</version>	
+  <version>1.0.3</version>	
   <packaging>jar</packaging>
   <name>AR 3D</name>
   <description>
@@ -37,12 +37,15 @@ https://github.com/nubomedia-vtt/armoduledemos.git
 </url>
 </scm>
   <properties>
-    <start-class>fi.vtt.nubomedia.kurento.Ar3DApp</start-class>    
+    <start-class>fi.vtt.nubomedia.armodule.Ar3DApp</start-class>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>    
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring-boot.version>1.2.1.RELEASE</spring-boot.version>
+  <nubomedia-media-client.version>1.0.2</nubomedia-media-client.version>
+
+
   </properties>
      
 <parent>
@@ -78,7 +81,7 @@ https://github.com/nubomedia-vtt/armoduledemos.git
 <dependency>
     <groupId>de.fhg.fokus.nubomedia</groupId>
     <artifactId>nubomedia-media-client</artifactId>
-    <version>1.0.1</version>
+    <version>${nubomedia-media-client.version}</version>
 </dependency>
 
     <dependency>
