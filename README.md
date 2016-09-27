@@ -1,7 +1,7 @@
 # arfilterdemopaas
 This project is part of [NUBOMEDIA].
 
-This is a demo application utilizing augemted reality (AR) intented to deployed into NUBOMEDIA PaaS 
+This is a demo application utilizing augmented reality (AR) intented to be deployed into NUBOMEDIA PaaS 
 
 **License**
 
