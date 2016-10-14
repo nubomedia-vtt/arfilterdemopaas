@@ -3,6 +3,15 @@ This project is part of [NUBOMEDIA].
 
 This is a demo application utilizing augmented reality (AR) intented to be deployed into NUBOMEDIA PaaS 
 
+**Documentation**
+
+http://nubomedia-vtt-ar.readthedocs.org/en/latest/
+
+**Artifacts**
+
+Maven Central:
+http://repo1.maven.org/maven2/fi/vtt/nubomedia/armodule/arfilterdemo/
+
 **Licensing and distribution**
 
 ArModule is licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
