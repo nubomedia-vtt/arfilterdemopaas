@@ -5,7 +5,7 @@ This is a demo application utilizing augmented reality (AR) intented to be deplo
 
 **Documentation**
 
-http://nubomedia-vtt-ar.readthedocs.org/en/latest/
+http://nubomedia-vtt-ar-demo.readthedocs.io/en/latest/
 
 **Artifacts**
 
